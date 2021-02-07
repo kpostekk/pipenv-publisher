@@ -33,6 +33,8 @@ from mypkg._version import __version__, __author__
 
 Tip: in PyCharm you can enable file watcher to automate this task.
 
+<img src="https://raw.githubusercontent.com/kpostekk/pipenv-publisher/main/.github/pycharm64_20210207_193318.png" height="320px"><img src="https://raw.githubusercontent.com/kpostekk/pipenv-publisher/main/.github/pycharm64_20210207_193323.png" height="320px">
+
 ### Lock before build
 ```shell
 pipenv run slock # or pipenv-pub lock 
@@ -49,4 +51,6 @@ pipenv run slock # or pipenv-pub lock
 - Can I still use `setup.cfg`
     - Yes.
 - Why does it exist?
-    - Because I can and there isn't any good tool for integrate `setuptools` and `Pipenv`.
+    - Because I can and there isn't any good tool to integrate `setuptools` and `Pipenv`.
+- Examples?
+    - This repo is an example lmao.
