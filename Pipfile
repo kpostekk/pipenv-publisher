@@ -16,7 +16,7 @@ python_version = "3.9"
 [setup]
 name = "pipenv-publisher"
 author = "Krystian Postek"
-version = "0.1.0a1"
+version = "0.1.0a2"
 packages = [
     "publisher"
 ]
