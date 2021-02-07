@@ -1,0 +1,17 @@
+{
+  "name": "pipenv-publisher",
+  "author": "Krystian Postek",
+  "version": "0.1.0a1",
+  "packages": [
+    "publisher"
+  ],
+  "entry_points": {
+    "console_scripts": [
+      "pipenv-pub=publisher:run"
+    ]
+  },
+  "install_requires": [
+    "pipenv",
+    "ezcliy>=0.2.1"
+  ]
+}

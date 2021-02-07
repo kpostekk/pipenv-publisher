@@ -1,0 +1,28 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pipenv = "*"
+ezcliy = ">=0.2.1"
+
+[dev-packages]
+wheel = "*"
+
+[requires]
+python_version = "3.9"
+
+[setup]
+name = "pipenv-publisher"
+author = "Krystian Postek"
+version = "0.1.0a1"
+packages = [
+    "publisher"
+]
+entry_points = {"console_scripts" = ["pipenv-pub=publisher:run"]}
+
+[scripts]
+build = "python setup.py bdist_wheel sdist build"
+slock = "pipenv-pub lock"
+stamp = "pipenv-pub stamp"
