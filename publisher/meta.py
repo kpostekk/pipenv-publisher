@@ -10,5 +10,5 @@ def create_meta_json(package_name: str):
     print('Saving author and version...')
     meta_dict = {'a': setup_dict['author'], 'v': setup_dict['version']}
     with Path.cwd().joinpath(package_name, 'meta.json').open('w') as f:
-        json.dump(meta_dict, f)
+        json.dump(meta_dict, f, ensure_ascii=False)
     print(f'Saved meta.json for {package_name}!')
