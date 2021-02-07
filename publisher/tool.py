@@ -1,7 +1,7 @@
 from ezcliy import Command, Positional, Flag
 
 from .meta import create_meta_json
-from .sample import copy_sample_setup, add_sctipts, copy_version
+from .sample import copy_sample_setup, add_sctipts, copy_version, create_setup_section
 from .setup_json import generate_setup_json
 
 
@@ -12,9 +12,13 @@ class PipenvAmigo(Command):
         allow_empty_calls = True
 
         def invoke(self):
-            copy_sample_setup()
-            generate_setup_json()
+            # Pipfile changes
+            create_setup_section()
             add_sctipts()
+            # Copy files
+            copy_sample_setup()
+            # First run
+            generate_setup_json()
 
     class VersionStamp(Command):
         name = 'stamp'
