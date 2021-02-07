@@ -35,5 +35,6 @@ class PipenvAmigo(Command):
             create_meta_json(str(self.pkg_name))
 
     class Lock(Command):
+        allow_empty_calls = True
         def invoke(self):
             generate_setup_json()
