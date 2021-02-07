@@ -1,6 +1,6 @@
 from ezcliy import Command, Positional, Flag
 
-from .meta import create_meta_json
+from .meta import create_meta_json, add_meta_json_pkg
 from .sample import copy_sample_setup, add_sctipts, copy_version, create_setup_section
 from .setup_json import generate_setup_json
 
@@ -32,9 +32,11 @@ class PipenvAmigo(Command):
             if not self.no_copy:
                 copy_version(str(self.pkg_name))
                 print('Remember to add import in __init__')
+            add_meta_json_pkg(str(self.pkg_name))
             create_meta_json(str(self.pkg_name))
 
     class Lock(Command):
         allow_empty_calls = True
+
         def invoke(self):
             generate_setup_json()

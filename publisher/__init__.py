@@ -1,5 +1,5 @@
 from publisher.tool import PipenvAmigo
-#from publisher._version import __version__
+from publisher._version import __version__, __author__
 
 if __name__ == '__main__':
     PipenvAmigo().entry('setup')

@@ -9,6 +9,7 @@ ezcliy = ">=0.2.1"
 
 [dev-packages]
 wheel = "*"
+twine = "*"
 
 [requires]
 python_version = "3.9"
@@ -16,11 +17,14 @@ python_version = "3.9"
 [setup]
 name = "pipenv-publisher"
 author = "Krystian Postek"
-version = "0.1.0a2"
+version = "0.1.0a3"
 packages = [
     "publisher"
 ]
 entry_points = {"console_scripts" = ["pipenv-pub=publisher:run"]}
+
+[setup.package_data]
+publisher = ["meta.json"]
 
 [scripts]
 build = "python setup.py bdist_wheel sdist build"
