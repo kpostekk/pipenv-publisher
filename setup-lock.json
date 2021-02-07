@@ -1,9 +1,10 @@
 {
   "name": "pipenv-publisher",
   "author": "Krystian Postek",
-  "version": "0.1.0a2",
+  "version": "0.1.0a4",
   "packages": [
-    "publisher"
+    "publisher",
+    "publisher._sample"
   ],
   "entry_points": {
     "console_scripts": [
