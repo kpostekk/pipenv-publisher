@@ -22,7 +22,7 @@ def add_sctipts():
     p = project.parsed_pipfile
     # noinspection PyTypeChecker
     p['scripts'] = p.get('scripts', {}) | {
-        'build': 'python setup.py bdsit_wheel sdist',
+        'build': 'python setup.py bdist_wheel sdist build',
         'slock': 'pipenv-pub lock',
         'stamp': 'pipenv-pub stamp'
     }
