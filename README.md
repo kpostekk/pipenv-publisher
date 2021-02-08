@@ -1,4 +1,4 @@
-# Pipenv publisher
+# <img alt="Pipenv publisher" src="https://raw.githubusercontent.com/kpostekk/pipenv-publisher/main/.github/untitled.png">
 Pipenv integration for setuptools.
 
 ## Install
