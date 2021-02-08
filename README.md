@@ -5,12 +5,12 @@ Pipenv integration for setuptools.
 
 ### From pypi
 ```shell
-pip install pipenv-publisher
+pipenv install pipenv-publisher
 ```
 
 ### From git
 ```shell
-pip install https://github.com/kpostekk/pipenv-publisher.git
+pipenv install https://github.com/kpostekk/pipenv-publisher.git#egg=publisher
 ```
 
 ### Initialise in your project
@@ -23,8 +23,10 @@ After this, remember to update package meta in Pipfile!
 
 ### Sync version
 ```shell
-pipenv run stamp <package> # or pipenv-pub stamp 
+pipenv-pub stamp . # or pipenv run stamp 
 ```
+
+> You can replace dot with package name
 
 Remember to add this into your `__init__.py`
 ```python
@@ -37,7 +39,7 @@ Tip: in PyCharm you can enable file watcher to automate this task.
 
 ### Lock before build
 ```shell
-pipenv run slock # or pipenv-pub lock 
+pipenv-pub lock # or pipenv run slock 
 ```
 
 ## FAQ
