@@ -1,16 +1,22 @@
 {
   "name": "pipenv-publisher",
+  "descriptio": "Pipenv integration for setuptools.",
   "author": "Krystian Postek",
-  "version": "0.1.0a4",
+  "author_email": "krystian@postek.eu",
+  "version": "0.1.0a6",
   "packages": [
     "publisher",
     "publisher._sample"
   ],
+  "project_urls": {
+    "Repository": "https://github.com/kpostekk/pipenv-publisher"
+  },
   "entry_points": {
     "console_scripts": [
       "pipenv-pub=publisher:run"
     ]
   },
+  "license": "Apache",
   "package_data": {
     "publisher": [
       "meta.json"

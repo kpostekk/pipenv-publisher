@@ -35,7 +35,8 @@ from mypkg._version import __version__, __author__
 
 Tip: in PyCharm you can enable file watcher to automate this task.
 
-<img src="https://raw.githubusercontent.com/kpostekk/pipenv-publisher/main/.github/pycharm64_20210207_193318.png" height="320px"><img src="https://raw.githubusercontent.com/kpostekk/pipenv-publisher/main/.github/pycharm64_20210207_193323.png" height="320px">
+<img src="https://raw.githubusercontent.com/kpostekk/pipenv-publisher/main/.github/pycharm64_20210207_193318.png" height="320px">
+<img src="https://raw.githubusercontent.com/kpostekk/pipenv-publisher/main/.github/pycharm64_20210207_193323.png" height="320px">
 
 ### Lock before build
 ```shell
