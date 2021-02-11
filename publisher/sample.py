@@ -36,7 +36,7 @@ def add_sctipts():
     p = project.parsed_pipfile
     # noinspection PyTypeChecker
     p['scripts'] = p.get('scripts', {}) | {
-        'build': 'python setup.py bdist_wheel build',
+        'build': 'python setup.py bdist_wheel bdist_egg build',
         'pub': 'pipenv-pub',
     }
     project.write_toml(p)
