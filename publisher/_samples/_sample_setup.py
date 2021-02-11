@@ -24,7 +24,7 @@ setup(
     **setup_lock,
     **auto_detect
 )
-
+exit()
 # Fallback for pipenv local loading
 setup(
     name=setup_lock['name'],
