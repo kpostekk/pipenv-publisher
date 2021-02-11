@@ -15,9 +15,9 @@ pipenv install https://github.com/kpostekk/pipenv-publisher.git#egg=publisher
 
 ### Initialise in your project
 ```shell
-pipenv-pub setup
+pipenv-pub setuptools setup
 ```
-After this, remember to update package meta in Pipfile!
+After this, remember to update package's meta in Pipfile!
 
 ## Usage
 
@@ -40,7 +40,7 @@ Tip: in PyCharm you can enable file watcher to automate this task.
 
 ### Lock before build
 ```shell
-pipenv-pub lock # or pipenv run slock 
+pipenv-pub setuptools lock # or pipenv run pub setuptools lock 
 ```
 
 ## FAQ
