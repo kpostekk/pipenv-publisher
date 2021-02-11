@@ -24,12 +24,13 @@ setup(
     **setup_lock,
     **auto_detect
 )
-exit()
-# Fallback for pipenv local loading
-setup(
-    name=setup_lock['name'],
-    version=setup_lock['version'],
-    author=setup_lock['author'],
-    packages=setup_lock['packages'],
-    install_requires=setup_lock['install_requires'],
-)
+
+if __name__ != '__main__':
+    # Fallback for pipenv local loading
+    setup(
+        name=setup_lock['name'],
+        version=setup_lock['version'],
+        author=setup_lock['author'],
+        packages=setup_lock['packages'],
+        install_requires=setup_lock['install_requires'],
+    )
