@@ -1,12 +1,22 @@
 {
+  "dependencies": [
+    "pipenv",
+    "ezcliy>=0.2.1"
+  ],
   "name": "pipenv-publisher",
-  "descriptio": "Pipenv integration for setuptools.",
+  "description": "Pipenv integration for setuptools.",
   "author": "Krystian Postek",
   "author_email": "krystian@postek.eu",
-  "version": "0.1.0a6",
+  "version": "0.1.0a7",
   "packages": [
     "publisher",
-    "publisher._sample"
+    "publisher._samples"
+  ],
+  "license": "Apache",
+  "classifiers": [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License"
   ],
   "project_urls": {
     "Repository": "https://github.com/kpostekk/pipenv-publisher"
@@ -16,7 +26,6 @@
       "pipenv-pub=publisher:run"
     ]
   },
-  "license": "Apache",
   "package_data": {
     "publisher": [
       "meta.json"

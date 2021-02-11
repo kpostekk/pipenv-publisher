@@ -11,24 +11,26 @@ ezcliy = ">=0.2.1"
 wheel = "*"
 twine = "*"
 
-[requires]
-python_version = "3.9"
-
-[setup]
+[project]
 name = "pipenv-publisher"
-descriptio = "Pipenv integration for setuptools."
+description = "Pipenv integration for setuptools."
 author = "Krystian Postek"
 author_email = "krystian@postek.eu"
 version = "0.1.0a7"
 packages = [
     "publisher",
-    "publisher._sample"
+    "publisher._samples",
 ]
-project_urls = {Repository = "https://github.com/kpostekk/pipenv-publisher"}
-entry_points = {"console_scripts" = ["pipenv-pub=publisher:run"]}
+project_urls = { Repository = "https://github.com/kpostekk/pipenv-publisher" }
+entry_points = { console_scripts = ["pipenv-pub=publisher:run"] }
 license = "Apache"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+]
 
-[setup.package_data]
+[project.package_data]
 publisher = ["meta.json"]
 
 [scripts]
@@ -39,3 +41,27 @@ pub = "pipenv-pub"
 
 [pipenv]
 allow_prereleases = true
+
+[setup]
+dependencies = ["pipenv", "ezcliy>=0.2.1", ]
+name = "pipenv-publisher"
+description = "Pipenv integration for setuptools."
+author = "Krystian Postek"
+author_email = "krystian@postek.eu"
+version = "0.1.0a7"
+packages = ["publisher", "publisher._samples", ]
+license = "Apache"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License"
+]
+
+[setup.project_urls]
+Repository = "https://github.com/kpostekk/pipenv-publisher"
+
+[setup.entry_points]
+console_scripts = ["pipenv-pub=publisher:run", ]
+
+[setup.package_data]
+publisher = ["meta.json", ]

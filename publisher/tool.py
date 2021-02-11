@@ -2,28 +2,49 @@ from ezcliy import Command, Positional, Flag
 from pipenv.project import Project
 
 from .meta import create_meta_json, add_meta_json_pkg
+from .project import PyProjectManager
 from .sample import copy_sample_setup, add_sctipts, copy_version, create_setup_section
+from .copy import copy_shim
 from .setup_json import generate_setup_json
 
 
 class PipenvAmigo(Command):
-    def invoke(self):  # Temp fix
-        if len(self.values):
-            print(self._helpman.render_help(self))
+    class PyProjectCmd(Command):
+        name = 'pyproject'
 
-    class Setup(Command):
-        name = 'setup'
-        description = 'Creates setup.py'
-        allow_empty_calls = True
+        class PyProSync(Command):
+            name = 'sync'
+            allow_empty_calls = True
+            no_copy = Flag('--no-copy')
 
-        def invoke(self):
-            # Pipfile changes
-            create_setup_section()
-            add_sctipts()
-            # Copy files
-            copy_sample_setup()
-            # First run
-            generate_setup_json()
+            def invoke(self):
+                if not self.no_copy:
+                    copy_shim('setup.py')
+                pyproman = PyProjectManager()
+                pyproman.get_pipfile_deps()
+
+    class SetupToolsCmd(Command):
+        name = 'setuptools'
+
+        class Setup(Command):
+            name = 'setup'
+            description = 'Creates setup.py'
+            allow_empty_calls = True
+
+            def invoke(self):
+                # Pipfile changes
+                create_setup_section()
+                add_sctipts()
+                # Copy files
+                copy_sample_setup()
+                # First run
+                generate_setup_json()
+
+        class Lock(Command):
+            allow_empty_calls = True
+
+            def invoke(self):
+                generate_setup_json()
 
     class VersionStamp(Command):
         name = 'stamp'
@@ -46,9 +67,3 @@ class PipenvAmigo(Command):
 
             add_meta_json_pkg(str(self.pkg_name))
             create_meta_json(str(self.pkg_name))
-
-    class Lock(Command):
-        allow_empty_calls = True
-
-        def invoke(self):
-            generate_setup_json()
