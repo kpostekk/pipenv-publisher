@@ -6,12 +6,12 @@ from pipenv.project import Project
 
 def copy_sample_setup():
     print('Copy setup.py')
-    shutil.copyfile(Path(__file__).parent.joinpath('_sample/_sample_setup.py'), Path.cwd().joinpath('setup.py'))
+    shutil.copyfile(Path(__file__).parent.joinpath('_samples/_sample_setup.py'), Path.cwd().joinpath('setup.py'))
 
 
 def copy_version(package_name: str):
     print('Copy _version.py')
-    shutil.copyfile(Path(__file__).parent.joinpath('_sample/_sample_version.py'), Path.cwd().joinpath(package_name, '_version.py'))
+    shutil.copyfile(Path(__file__).parent.joinpath('_samples/_sample_version.py'), Path.cwd().joinpath(package_name, '_version.py'))
 
 
 def create_setup_section():
