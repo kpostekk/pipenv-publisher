@@ -1,4 +1,4 @@
-# <img alt="Pipenv publisher" src="https://raw.githubusercontent.com/kpostekk/pipenv-publisher/main/.github/untitled.png">
+# <img alt="Pipenv publisher" src="https://github.com/kpostekk/pipenv-publisher/raw/main/.github/untitled.jpg">
 Pipenv integration for setuptools.
 
 ## Install
@@ -17,6 +17,8 @@ pipenv install https://github.com/kpostekk/pipenv-publisher.git#egg=publisher
 ```shell
 pipenv-pub setuptools setup
 ```
+That will copy ✨special✨ `setup.py` in your project directory, add missing declarations to the `Pipfile` and do lock.
+
 After this, remember to update package's meta in Pipfile!
 
 ## Usage
